@@ -80,6 +80,21 @@
   li { margin-bottom: 3px; }
   .skill-row { margin-bottom: 6px; }
   .skill-label { font-weight: 700; }
+  .downloads {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .downloads a {
+    font-size: 0.82rem;
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    padding: 5px 12px;
+  }
+  .downloads a:hover { background: var(--accent); color: #fff; }
+  @media print { .downloads { display: none; } }
 </style>
 </head>
 <body>
@@ -94,6 +109,10 @@
       <div>Phone: +60 16-610 4339</div>
       <div>LinkedIn: <a href="https://www.linkedin.com/in/muhammad-zaim-rusli-805715108">linkedin.com/in/muhammad-zaim-rusli-805715108</a></div>
       <div>Location: Penang, Malaysia</div>
+    </div>
+    <div class="downloads">
+      <a href="resume.pdf" download>Download PDF</a>
+      <a href="../ats/Muhammad_Zaim_Rusli_Resume.docx" download>Download ATS-Safe .docx</a>
     </div>
   </div>
 </header>

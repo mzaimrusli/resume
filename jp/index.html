@@ -101,6 +101,22 @@
   li { margin-bottom: 3px; }
   .skill-row { margin-bottom: 6px; font-size: 0.9rem; }
   .skill-label { font-weight: 700; color: var(--accent); }
+  .downloads {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .downloads a {
+    font-size: 0.8rem;
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    padding: 5px 12px;
+    background: #ffffff;
+  }
+  .downloads a:hover { background: var(--accent); color: #fff; }
+  @media print { .downloads { display: none; } }
 </style>
 </head>
 <body>
@@ -119,6 +135,10 @@
       <tr><td class="label">Work Authorization</td><td>Requires visa sponsorship / work permit in Japan</td></tr>
       <tr><td class="label">Japanese Proficiency</td><td>Not yet proficient; confident in picking up working-level Japanese on the job through daily immersion, AI-assisted language tools, and local language classes after relocation</td></tr>
     </table>
+    <div class="downloads">
+      <a href="resume.pdf" download>Download PDF</a>
+      <a href="../ats/Muhammad_Zaim_Rusli_Resume.docx" download>Download ATS-Safe .docx</a>
+    </div>
   </div>
 </header>
 
