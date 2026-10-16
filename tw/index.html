@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Zaim Bin Rusli — Resume</title>
+<style>
+  :root {
+    --text: #1a1a1a;
+    --muted: #595959;
+    --accent: #be123c;
+    --border: #e2e2e2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Calibri, Arial, "Segoe UI", sans-serif;
+    color: var(--text);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+    line-height: 1.5;
+  }
+  header {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 24px;
+  }
+  .photo {
+    width: 110px;
+    height: 130px;
+    flex-shrink: 0;
+    border: 2px solid var(--accent);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 0.75rem;
+    text-align: center;
+    background: #f3f4f6;
+  }
+  h1 { font-size: 1.7rem; margin: 0 0 2px; color: var(--accent); }
+  .title { font-size: 1.05rem; color: var(--muted); margin: 0 0 10px; }
+  .contact { font-size: 0.9rem; color: var(--muted); }
+  .contact a { color: var(--accent); text-decoration: none; }
+  .contact a:hover { text-decoration: underline; }
+  .contact div { margin-bottom: 2px; }
+  section { margin-bottom: 26px; }
+  h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 5px;
+    margin-bottom: 14px;
+  }
+  .particulars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 24px;
+    font-size: 0.92rem;
+  }
+  .particulars div span { color: var(--muted); }
+  .entry { margin-bottom: 18px; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+  }
+  .entry-role { font-weight: 700; }
+  .entry-org { color: var(--muted); }
+  .entry-date { color: var(--muted); font-size: 0.88rem; white-space: nowrap; }
+  .entry-sub { font-weight: 700; margin: 10px 0 2px; color: var(--accent); }
+  ul { margin: 6px 0 0; padding-left: 20px; }
+  li { margin-bottom: 3px; }
+  .skill-row { margin-bottom: 6px; }
+  .skill-label { font-weight: 700; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="photo"><!-- Replace with: <img src="photo.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:4px;"> -->Photo</div>
+  <div>
+    <h1>Muhammad Zaim Bin Rusli</h1>
+    <p class="title">Senior System Validation &amp; Silicon Debug Engineer</p>
+    <div class="contact">
+      <div>Email: <a href="mailto:mzaimrusli@gmail.com">mzaimrusli@gmail.com</a></div>
+      <div>Phone: <!-- EDIT: add your number --> [Add phone number]</div>
+      <div>LinkedIn: <a href="https://www.linkedin.com/in/muhammad-zaim-rusli-805715108">linkedin.com/in/muhammad-zaim-rusli-805715108</a></div>
+      <div>Location: Penang, Malaysia</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <h2>Personal Particulars</h2>
+  <div class="particulars">
+    <div><span>Nationality:</span> Malaysian</div>
+    <div><span>Languages:</span> <!-- EDIT --> [e.g. English, Bahasa Malaysia, Mandarin level]</div>
+    <div><span>Expected Salary:</span> <!-- EDIT --> [negotiable / amount]</div>
+    <div><span>Availability:</span> <!-- EDIT --> [e.g. 1-month notice]</div>
+    <div><span>Work Authorization:</span> <!-- EDIT --> Requires work permit sponsorship in Taiwan</div>
+  </div>
+</section>
+
+<section>
+  <h2>Professional Summary</h2>
+  <p>
+    Senior System Validation and Silicon Debug Engineer with nearly 10 years of experience spanning
+    semiconductor manufacturing, ATE test development, pre-silicon verification, post-silicon validation,
+    System Level Test (SLT) and data center platform qualification across Intel Xeon and AMD EPYC
+    server processors.
+  </p>
+  <p>
+    Proven expertise in system-level validation, production readiness qualification, silicon bring-up,
+    failure analysis, yield improvement, RMA debug, hardware-software-firmware integration and
+    manufacturing test optimization. Experienced in developing automated validation infrastructures
+    using Python and Shell scripting while driving complex cross-domain root cause analysis across
+    silicon, firmware, BIOS, operating systems and platform hardware.
+  </p>
+</section>
+
+<section>
+  <h2>Technical Skills</h2>
+  <div class="skill-row"><span class="skill-label">Architecture &amp; Platforms:</span> AMD EPYC, Intel Xeon, x86 Architecture, Server Platforms, Datacenter Infrastructure, PCIe Gen4/Gen5, CXL, DDR4/DDR5, BIOS/UEFI, OpenBMC</div>
+  <div class="skill-row"><span class="skill-label">Programming &amp; Automation:</span> Python, PyTest, Shell/Bash, C/C++, SystemVerilog, UVM, Simics Automation</div>
+  <div class="skill-row"><span class="skill-label">Debug &amp; Diagnostics:</span> Machine Check Exceptions (MCE), WHEA, BERT, Error Injection, Status Registers, Scan Dumps, dmesg, UART, BIOS Debug, Firmware Debug</div>
+  <div class="skill-row"><span class="skill-label">Tools:</span> PRISM, HEXA, Git, JIRA, Simics, Verdi, DediProg, Linux, Windows</div>
+</section>
+
+<section>
+  <h2>Professional Experience</h2>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span><span class="entry-role">Functional Validation Engineer</span> · <span class="entry-org">Advanced Micro Devices (AMD)</span></span>
+      <span class="entry-date">June 2024 – Present · Penang, Malaysia</span>
+    </div>
+    <ul>
+      <li>Execute post-silicon functional validation and production readiness qualification activities on AMD EPYC server processors.</li>
+      <li>Perform system-level validation across CPU, memory, PCIe and firmware subsystems under customer-representative workloads.</li>
+      <li>Conduct failure analysis using Machine Check Exceptions (MCE), WHEA Logger, BERT records and hardware status registers.</li>
+      <li>Support platform bring-up, hardware assembly, BIOS configuration, OpenBMC management and regression infrastructure maintenance.</li>
+      <li>Develop Python-based automation within the PRISM validation framework to improve validation throughput.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span><span class="entry-role">System Validation Engineer</span> · <span class="entry-org">Intel Microelectronics</span></span>
+      <span class="entry-date">August 2019 – May 2024 · Kulim, Malaysia</span>
+    </div>
+
+    <div class="entry-sub">Post-Silicon System Validation</div>
+    <ul>
+      <li>Executed structured test plans, silicon qualification activities and manufacturing readiness validation on Intel Xeon server processors.</li>
+      <li>Developed and maintained Python and Shell-based automation within the HEXA validation framework.</li>
+      <li>Conducted extensive stress, corner-case and concurrency testing to characterize silicon quality and reliability.</li>
+      <li>Performed root cause analysis across hardware, BIOS, firmware and OS layers to resolve manufacturing-blocking issues.</li>
+      <li>Validated security and trusted execution features including TDX, SGX, ACM and SEAM Loader integration.</li>
+    </ul>
+
+    <div class="entry-sub">Pre-Silicon Validation &amp; Emulation</div>
+    <ul>
+      <li>Executed SoC functional validation in Simics Virtual Platform and FPGA emulation environments.</li>
+      <li>Validated security and trusted execution features prior to silicon availability.</li>
+    </ul>
+
+    <div class="entry-sub">Client &amp; Embedded Validation</div>
+    <ul>
+      <li>Performed system-level validation on embedded and client platform SoCs.</li>
+      <li>Collaborated with firmware and software teams to resolve integration issues.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span><span class="entry-role">IP Verification Engineer</span> · <span class="entry-org">Intel Microelectronics</span></span>
+      <span class="entry-date">March 2018 – August 2019 · Penang, Malaysia</span>
+    </div>
+    <ul>
+      <li>Verified R-Link Soft IP functionality using SystemVerilog and UVM methodologies.</li>
+      <li>Developed constrained-random test scenarios to improve feature coverage and RTL bug detection.</li>
+      <li>Collaborated closely with RTL design teams to resolve protocol and integration issues prior to tape-out.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span><span class="entry-role">Test &amp; Product Engineer</span> · <span class="entry-org">Malaysia Microelectronic Solutions (MMS)</span></span>
+      <span class="entry-date">August 2017 – March 2018 · Selangor, Malaysia</span>
+    </div>
+    <ul>
+      <li>Developed and debugged production ATE test programs supporting semiconductor high-volume manufacturing.</li>
+      <li>Performed yield analysis, electrical characterization and probe-level failure debug.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span><span class="entry-role">Graduate Engineer</span> · <span class="entry-org">NXP Semiconductors</span></span>
+      <span class="entry-date">September 2016 – July 2017 · Selangor, Malaysia</span>
+    </div>
+    <ul>
+      <li>Developed Teradyne J750 production test solutions.</li>
+      <li>Performed device characterization, failure analysis and tester correlation activities.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <div class="entry">
+    <div class="entry-header">
+      <span><span class="entry-role">Bachelor of Engineering (Hons.), Electronic Engineering</span> · <span class="entry-org">Universiti Teknologi MARA (UiTM)</span></span>
+      <span class="entry-date">2016</span>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
