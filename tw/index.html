@@ -138,9 +138,9 @@
   </p>
   <p>
     Proven expertise in system-level validation, production readiness qualification, silicon bring-up,
-    failure analysis, yield improvement, RMA debug, hardware-software-firmware integration and
-    manufacturing test optimization. Experienced in developing automated validation infrastructures
-    using Python and Shell scripting while driving complex cross-domain root cause analysis across
+    failure analysis, yield improvement, debug, hardware-software-firmware integration and
+    manufacturing test optimization. Experienced in developing automated validation scripts
+    using Python and Shell scripting while driving cross-domain root cause analysis across
     silicon, firmware, BIOS, operating systems and platform hardware.
   </p>
   <p>
@@ -155,22 +155,22 @@
   <ul>
     <li>Nearly 10 years of experience across semiconductor manufacturing test, ATE, post-silicon validation and production qualification.</li>
     <li>Hands-on experience supporting High Volume Manufacturing (HVM) environments.</li>
-    <li>Developed and maintained automated test infrastructure for validation and production readiness programs.</li>
+    <li>Developed and maintained automated test scripts for validation and production readiness.</li>
     <li>Expertise correlating manufacturing failures, system-level failures and silicon root causes.</li>
     <li>Extensive experience debugging issues across hardware, firmware, BIOS and operating system boundaries.</li>
-    <li>Strong background in server platform bring-up including CPU, memory, PCIe devices, NICs and BMC infrastructures.</li>
-    <li>Experience supporting release and manufacturing decisions based on validation readiness criteria.</li>
+    <li>Strong background in server platform bring-up including CPU, memory, PCIe devices, NICs and OpenBMC infrastructures.</li>
+    <li>Experience supporting release and manufacturing decisions based on validation readiness.</li>
     <li>Proven ability to identify validation and test coverage gaps through structured failure analysis.</li>
-    <li>Experienced in System Level Test (SLT), Manufacturing Readiness, Production Qualification, Yield Improvement, Failure Correlation, Tester Correlation, Root Cause Analysis, RMA Analysis, Product Characterization, Performance Characterization, Platform Bring-up, Power Characterization and Automation Infrastructure development.</li>
+    <li>Experienced in SLT, Manufacturing Readiness, Production Qualification, Yield Improvement, Failure Correlation, Tester Correlation, Root Cause Analysis, Platform Bring-up.</li>
   </ul>
 </section>
 
 <section>
   <h2>Technical Skills</h2>
-  <div class="skill-row"><span class="skill-label">Architecture &amp; Platforms:</span> AMD EPYC, Intel Xeon, x86 Architecture, Server Platforms, Datacenter Infrastructure, PCIe Gen4/Gen5, CXL, DDR4/DDR5, BIOS/UEFI, OpenBMC</div>
+  <div class="skill-row"><span class="skill-label">Architecture &amp; Platforms:</span> AMD EPYC, Intel Xeon, x86 Architecture, Server Platforms, Datacenter Infrastructure, PCIe Gen5/Gen6, DDR4/DDR5, BIOS/UEFI, OpenBMC</div>
   <div class="skill-row"><span class="skill-label">Programming &amp; Automation:</span> Python, PyTest, Shell/Bash, C/C++, SystemVerilog, UVM, Simics Automation</div>
-  <div class="skill-row"><span class="skill-label">Debug &amp; Diagnostics:</span> Machine Check Exceptions (MCE), WHEA, BERT, Error Injection, Status Registers, Scan Dumps, dmesg, UART, BIOS Debug, Firmware Debug</div>
-  <div class="skill-row"><span class="skill-label">Tools:</span> PRISM, HEXA, Git, JIRA, Simics, Verdi, DediProg, Linux, Windows</div>
+  <div class="skill-row"><span class="skill-label">Debug &amp; Diagnostics:</span> Machine Check Exceptions (MCE), WHEA, BERT, Error Injection, Status Registers, Scan Dumps, dmesg, serial/UART console, SPI flash reprogramming, JTAG</div>
+  <div class="skill-row"><span class="skill-label">Tools:</span> PRISM, HEXA, Git, JIRA, Confluence, Simics, Verdi, DediProg, Linux, Windows, Xilinx Vivado</div>
 </section>
 
 <section>
@@ -182,13 +182,15 @@
       <span class="entry-date">June 2024 – Present · Penang, Malaysia</span>
     </div>
     <ul>
-      <li>Execute post-silicon functional validation and production readiness qualification activities on AMD EPYC server processors.</li>
-      <li>Perform system-level validation across CPU, memory, PCIe and firmware subsystems under customer-representative workloads.</li>
-      <li>Conduct failure analysis using Machine Check Exceptions (MCE), WHEA Logger, BERT records and hardware status registers to identify silicon and platform root causes.</li>
-      <li>Execute error injection, reliability testing and platform characterization to evaluate robustness of production silicon.</li>
-      <li>Support platform bring-up, hardware assembly, BIOS configuration, OpenBMC management, operating system provisioning and regression infrastructure maintenance.</li>
-      <li>Develop Python-based automation solutions within the PRISM validation framework to improve validation throughput and execution consistency.</li>
-      <li>Work cross-functionally with architecture, firmware, BIOS and platform engineering teams to resolve complex system-level issues and improve validation coverage.</li>
+      <li>Bring up new AMD EPYC server platforms end-to-end from receipt of engineering systems, including HW installation (DIMM, CPU), troubleshooting (NIC, LAN, component), firmware flashing (BIOS, BMC, FPGA), OS provisioning and OpenBMC configuration, to establish a stable boot baseline ahead of RAS test execution.</li>
+      <li>Triage platform bring-up failures on new silicon, isolating root cause across DIMM faults, CPLD corruption, outdated firmware recipes (BMC/BIOS/FPGA version mismatches), physically damaged components, leakage and device enumeration failures preventing system boot.</li>
+      <li>Validate RAS error detection, classification and recovery behavior for XGMI flit errors, PCIe AER (Correctable/Non-Fatal/Fatal) and DRAM ECC (single-bit/multi-bit) on server platforms.</li>
+      <li>Analyze error logs and traces across dmesg, BERT, register dump, Sherlock, WinDbg and DebugView to confirm errors are correctly detected, logged and surfaced to the OS/firmware without being silently dropped or misclassified.</li>
+      <li>Develop and maintain a pytest-based PCIe AER RAS validation suite covering correctable and uncorrectable (fatal/non-fatal) error types such as LCRC, ECRC and poisoned TLP, across OS-First and Firmware-First (SMI/MPRAS) reporting modes, with Downstream Port Containment on/off, using both ACPI EINJ and direct register-level (SMN) error injection.</li>
+      <li>Implement register-level PCI configuration space overrides (via setpci) to force root-port DPC and error-mask register state to match intended test conditions when BIOS defaults diverged, restoring original state after each test.</li>
+      <li>Leverage AI coding assistants (Claude) to accelerate development and maintenance of Python-based RAS validation scripts, freeing up engineering time for validation, debug and silicon root-cause analysis.</li>
+      <li>Own regression across platform configurations against evolving FW builds within the PRISM framework, triaging failures to root cause across script, framework, platform or silicon.</li>
+      <li>Collaborate cross-functionally with architecture, firmware, BIOS and HW teams to close out complex system-level RAS issues and improve validation coverage, tracking issues in Jira and maintaining debug/validation documentation in Confluence.</li>
     </ul>
   </div>
 
@@ -200,28 +202,24 @@
 
     <div class="entry-sub">Post-Silicon System Validation</div>
     <ul>
-      <li>Executed structured test plans, silicon qualification activities and manufacturing readiness validation on Intel Xeon server processors.</li>
-      <li>Defined system-level validation methodologies supporting production release decisions for complex server SoCs.</li>
+      <li>Improved and executed structured test plans and silicon qualification activities on the Intel Xeon server platform, defining system-level validation methodologies that directly supported production release decisions.</li>
       <li>Developed and maintained Python and Shell-based automation within the HEXA validation framework to improve regression efficiency and validation scalability.</li>
-      <li>Conducted extensive stress, corner-case and concurrency testing to characterize silicon quality, reliability and scalability under production-like conditions.</li>
-      <li>Performed root cause analysis across hardware, BIOS, firmware and operating system layers to resolve manufacturing-blocking and customer-impacting issues.</li>
-      <li>Validated security, trusted execution and platform initialization features including TDX, SGX, ACM and SEAM Loader integration.</li>
-      <li>Executed large-scale concurrency testing involving hundreds of simultaneous workloads to validate platform stability and memory resource management.</li>
-      <li>Collaborated with architecture teams to drive silicon defect identification, debug and closure.</li>
-      <li>Supported manufacturing release criteria through objective silicon validation metrics and readiness assessments.</li>
+      <li>Validated ACM authentication and SEAM Loader boot/initialization flows for TDX, confirming correct TDX module measurement and loading across BIOS and microcode updates.</li>
+      <li>Validated SGX and TDX attestation flows, confirming enclave/TD quotes correctly reflect genuine platform and measurement state.</li>
+      <li>Validated concurrency and stress testing involving hundreds of simultaneous enclaves/Trust Domains to characterize silicon reliability and validate isolation integrity under production-like load.</li>
+      <li>Performed root cause analysis across hardware, BIOS, firmware and OS layers, collaborating with architecture teams to resolve manufacturing-blocking and customer-impacting silicon defects.</li>
     </ul>
 
     <div class="entry-sub">Pre-Silicon Validation &amp; Emulation</div>
     <ul>
-      <li>Executed SoC functional validation in Simics Virtual Platform and FPGA emulation environments.</li>
-      <li>Developed automation to validate boot flows, feature enablement and register-level functionality.</li>
-      <li>Validated security and trusted execution features prior to silicon availability, reducing downstream silicon debug effort.</li>
+      <li>Responsible for SoC functional validation of Intel Xeon server processors in Simics Virtual Platform and FPGA emulation environments ahead of silicon availability.</li>
+      <li>Developed JSON-configurable automation to drive boot sequences and verify TDX/SGX-related register state against specification, enabling fast scenario experimentation without code changes.</li>
+      <li>Debugged cases where expected registers failed to reach their specified state, tracing root cause across initialization ordering and distinguishing genuine design issues from virtual-platform model limitations.</li>
     </ul>
 
     <div class="entry-sub">Client &amp; Embedded Validation</div>
     <ul>
-      <li>Performed system-level validation on embedded and client platform SoCs.</li>
-      <li>Developed automation supporting boot verification and platform readiness checks.</li>
+      <li>Performed functional validation on client/laptop platform SoCs using Simics Virtual Platform, developing automation (legacy in-house framework) to drive the full flow from system boot through BIOS configuration changes to device/register verification on the system under test.</li>
       <li>Collaborated with firmware and software teams to resolve integration issues and improve platform stability.</li>
     </ul>
   </div>
@@ -232,24 +230,20 @@
       <span class="entry-date">March 2018 – August 2019 · Penang, Malaysia</span>
     </div>
     <ul>
-      <li>Verified R-Link Soft IP functionality using SystemVerilog and UVM methodologies.</li>
-      <li>Developed constrained-random test scenarios to improve feature coverage and RTL bug detection.</li>
-      <li>Performed waveform analysis and root cause investigation using Verdi simulation tools.</li>
-      <li>Developed assertions and coverage metrics supporting verification closure objectives.</li>
-      <li>Collaborated closely with RTL design teams to resolve protocol and integration issues prior to tape-out.</li>
+      <li>Verified a soft IP block's functionality using SystemVerilog/UVM, improving and extending constrained-random test scenarios that uncovered handshake failures and timing-window violations in signal insertion, broadening test coverage to catch them.</li>
+      <li>Performed waveform-level root cause analysis using Verdi to debug the protocol and timing issues identified during verification.</li>
+      <li>Collaborated with RTL design and architecture teams to resolve protocol and integration issues or limitations ahead of release.</li>
     </ul>
   </div>
 
   <div class="entry">
     <div class="entry-header">
-      <span><span class="entry-role">Test &amp; Product Engineer</span> · <span class="entry-org">Malaysia Microelectronic Solutions (MMS)</span></span>
+      <span><span class="entry-role">Test &amp; Product Engineer</span> · <span class="entry-org">Malaysia Microelectronic Solutions (MyMS)</span></span>
       <span class="entry-date">August 2017 – March 2018 · Selangor, Malaysia</span>
     </div>
     <ul>
-      <li>Developed and debugged production ATE test programs supporting semiconductor high-volume manufacturing.</li>
-      <li>Performed yield analysis, electrical characterization and probe-level failure debug.</li>
-      <li>Supported manufacturing test optimization and production release readiness.</li>
-      <li>Collaborated with external organizations to resolve hardware and probe-related production issues.</li>
+      <li>Developed and debugged ATE test programs on Credence Kalos testers for production IC test, including a smart card (payphone card) product for an overseas telecom customer.</li>
+      <li>Performed wafer probing on an Electroglas EG4090&micro; wafer prober loaned from MIMOS, diagnosing probe-related hardware issues including prober die-indexing/mapping mismatches and resolving them in coordination with MIMOS, while supporting yield analysis and electrical characterization for production release readiness.</li>
     </ul>
   </div>
 
@@ -259,10 +253,8 @@
       <span class="entry-date">September 2016 – July 2017 · Selangor, Malaysia</span>
     </div>
     <ul>
-      <li>Developed Teradyne J750 production test solutions.</li>
-      <li>Performed device characterization, failure analysis and tester correlation activities.</li>
-      <li>Supported production qualification and yield improvement initiatives.</li>
-      <li>Maintained automation scripts supporting manufacturing and characterization activities.</li>
+      <li>Enhanced Teradyne J750 production test programs for automotive MCU devices as part of the NVM (non-volatile memory) test team.</li>
+      <li>Performed device characterization and tester-to-golden-unit correlation to validate test accuracy, supporting failure analysis, yield improvement and production qualification.</li>
     </ul>
   </div>
 </section>

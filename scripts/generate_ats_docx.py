@@ -56,9 +56,9 @@ para(
 )
 para(
     "Proven expertise in system-level validation, production readiness qualification, silicon bring-up, "
-    "failure analysis, yield improvement, RMA debug, hardware-software-firmware integration and manufacturing "
-    "test optimization. Experienced in developing automated validation infrastructures using Python and Shell "
-    "scripting while driving complex cross-domain root cause analysis across silicon, firmware, BIOS, operating "
+    "failure analysis, yield improvement, debug, hardware-software-firmware integration and manufacturing "
+    "test optimization. Experienced in developing automated validation scripts using Python and Shell "
+    "scripting while driving cross-domain root cause analysis across silicon, firmware, BIOS, operating "
     "systems and platform hardware."
 )
 para(
@@ -70,92 +70,83 @@ heading("System Level Test and Manufacturing Highlights")
 for b in [
     "Nearly 10 years of experience across semiconductor manufacturing test, ATE, post-silicon validation and production qualification.",
     "Hands-on experience supporting High Volume Manufacturing (HVM) environments.",
-    "Developed and maintained automated test infrastructure for validation and production readiness programs.",
+    "Developed and maintained automated test scripts for validation and production readiness.",
     "Expertise correlating manufacturing failures, system-level failures and silicon root causes.",
     "Extensive experience debugging issues across hardware, firmware, BIOS and operating system boundaries.",
-    "Strong background in server platform bring-up including CPU, memory, PCIe devices, NICs and BMC infrastructures.",
-    "Experience supporting release and manufacturing decisions based on validation readiness criteria.",
+    "Strong background in server platform bring-up including CPU, memory, PCIe devices, NICs and OpenBMC infrastructures.",
+    "Experience supporting release and manufacturing decisions based on validation readiness.",
     "Proven ability to identify validation and test coverage gaps through structured failure analysis.",
-    "Experienced in System Level Test (SLT), Manufacturing Readiness, Production Qualification, Yield Improvement, "
-    "Failure Correlation, Tester Correlation, Root Cause Analysis, RMA Analysis, Product Characterization, "
-    "Performance Characterization, Platform Bring-up, Power Characterization and Automation Infrastructure development.",
+    "Experienced in SLT, Manufacturing Readiness, Production Qualification, Yield Improvement, "
+    "Failure Correlation, Tester Correlation, Root Cause Analysis, Platform Bring-up.",
 ]:
     bullet(b)
 
 heading("Technical Skills")
-para("Architecture & Platforms: AMD EPYC, Intel Xeon, x86 Architecture, Server Platforms, Datacenter Infrastructure, PCIe Gen4/Gen5, CXL, DDR4/DDR5, BIOS/UEFI, OpenBMC")
+para("Architecture & Platforms: AMD EPYC, Intel Xeon, x86 Architecture, Server Platforms, Datacenter Infrastructure, PCIe Gen5/Gen6, DDR4/DDR5, BIOS/UEFI, OpenBMC")
 para("Programming & Automation: Python, PyTest, Shell/Bash, C/C++, SystemVerilog, UVM, Simics Automation")
-para("Debug & Diagnostics: Machine Check Exceptions (MCE), WHEA, BERT, Error Injection, Status Registers, Scan Dumps, dmesg, UART, BIOS Debug, Firmware Debug")
-para("Tools: PRISM, HEXA, Git, JIRA, Simics, Verdi, DediProg, Linux, Windows")
+para("Debug & Diagnostics: Machine Check Exceptions (MCE), WHEA, BERT, Error Injection, Status Registers, Scan Dumps, dmesg, serial/UART console, SPI flash reprogramming, JTAG")
+para("Tools: PRISM, HEXA, Git, JIRA, Confluence, Simics, Verdi, DediProg, Linux, Windows, Xilinx Vivado")
 
 heading("Professional Experience")
 
 entry_header("Functional Validation Engineer", "Advanced Micro Devices (AMD), Penang, Malaysia", "June 2024 - Present")
 for b in [
-    "Execute post-silicon functional validation and production readiness qualification activities on AMD EPYC server processors.",
-    "Perform system-level validation across CPU, memory, PCIe and firmware subsystems under customer-representative workloads.",
-    "Conduct failure analysis using Machine Check Exceptions (MCE), WHEA Logger, BERT records and hardware status registers to identify silicon and platform root causes.",
-    "Execute error injection, reliability testing and platform characterization to evaluate robustness of production silicon.",
-    "Support platform bring-up, hardware assembly, BIOS configuration, OpenBMC management, operating system provisioning and regression infrastructure maintenance.",
-    "Develop Python-based automation solutions within the PRISM validation framework to improve validation throughput and execution consistency.",
-    "Work cross-functionally with architecture, firmware, BIOS and platform engineering teams to resolve complex system-level issues and improve validation coverage.",
+    "Bring up new AMD EPYC server platforms end-to-end from receipt of engineering systems, including HW installation (DIMM, CPU), troubleshooting (NIC, LAN, component), firmware flashing (BIOS, BMC, FPGA), OS provisioning and OpenBMC configuration, to establish a stable boot baseline ahead of RAS test execution.",
+    "Triage platform bring-up failures on new silicon, isolating root cause across DIMM faults, CPLD corruption, outdated firmware recipes (BMC/BIOS/FPGA version mismatches), physically damaged components, leakage and device enumeration failures preventing system boot.",
+    "Validate RAS error detection, classification and recovery behavior for XGMI flit errors, PCIe AER (Correctable/Non-Fatal/Fatal) and DRAM ECC (single-bit/multi-bit) on server platforms.",
+    "Analyze error logs and traces across dmesg, BERT, register dump, Sherlock, WinDbg and DebugView to confirm errors are correctly detected, logged and surfaced to the OS/firmware without being silently dropped or misclassified.",
+    "Develop and maintain a pytest-based PCIe AER RAS validation suite covering correctable and uncorrectable (fatal/non-fatal) error types such as LCRC, ECRC and poisoned TLP, across OS-First and Firmware-First (SMI/MPRAS) reporting modes, with Downstream Port Containment on/off, using both ACPI EINJ and direct register-level (SMN) error injection.",
+    "Implement register-level PCI configuration space overrides (via setpci) to force root-port DPC and error-mask register state to match intended test conditions when BIOS defaults diverged, restoring original state after each test.",
+    "Leverage AI coding assistants (Claude) to accelerate development and maintenance of Python-based RAS validation scripts, freeing up engineering time for validation, debug and silicon root-cause analysis.",
+    "Own regression across platform configurations against evolving FW builds within the PRISM framework, triaging failures to root cause across script, framework, platform or silicon.",
+    "Collaborate cross-functionally with architecture, firmware, BIOS and HW teams to close out complex system-level RAS issues and improve validation coverage, tracking issues in Jira and maintaining debug/validation documentation in Confluence.",
 ]:
     bullet(b)
 
 entry_header("System Validation Engineer", "Intel Microelectronics, Kulim, Malaysia", "August 2019 - May 2024")
 para("Post-Silicon System Validation", bold=True)
 for b in [
-    "Executed structured test plans, silicon qualification activities and manufacturing readiness validation on Intel Xeon server processors.",
-    "Defined system-level validation methodologies supporting production release decisions for complex server SoCs.",
+    "Improved and executed structured test plans and silicon qualification activities on the Intel Xeon server platform, defining system-level validation methodologies that directly supported production release decisions.",
     "Developed and maintained Python and Shell-based automation within the HEXA validation framework to improve regression efficiency and validation scalability.",
-    "Conducted extensive stress, corner-case and concurrency testing to characterize silicon quality, reliability and scalability under production-like conditions.",
-    "Performed root cause analysis across hardware, BIOS, firmware and operating system layers to resolve manufacturing-blocking and customer-impacting issues.",
-    "Validated security, trusted execution and platform initialization features including TDX, SGX, ACM and SEAM Loader integration.",
-    "Executed large-scale concurrency testing involving hundreds of simultaneous workloads to validate platform stability and memory resource management.",
-    "Collaborated with architecture teams to drive silicon defect identification, debug and closure.",
-    "Supported manufacturing release criteria through objective silicon validation metrics and readiness assessments.",
+    "Validated ACM authentication and SEAM Loader boot/initialization flows for TDX, confirming correct TDX module measurement and loading across BIOS and microcode updates.",
+    "Validated SGX and TDX attestation flows, confirming enclave/TD quotes correctly reflect genuine platform and measurement state.",
+    "Validated concurrency and stress testing involving hundreds of simultaneous enclaves/Trust Domains to characterize silicon reliability and validate isolation integrity under production-like load.",
+    "Performed root cause analysis across hardware, BIOS, firmware and OS layers, collaborating with architecture teams to resolve manufacturing-blocking and customer-impacting silicon defects.",
 ]:
     bullet(b)
 para("Pre-Silicon Validation and Emulation", bold=True)
 for b in [
-    "Executed SoC functional validation in Simics Virtual Platform and FPGA emulation environments.",
-    "Developed automation to validate boot flows, feature enablement and register-level functionality.",
-    "Validated security and trusted execution features prior to silicon availability, reducing downstream silicon debug effort.",
+    "Responsible for SoC functional validation of Intel Xeon server processors in Simics Virtual Platform and FPGA emulation environments ahead of silicon availability.",
+    "Developed JSON-configurable automation to drive boot sequences and verify TDX/SGX-related register state against specification, enabling fast scenario experimentation without code changes.",
+    "Debugged cases where expected registers failed to reach their specified state, tracing root cause across initialization ordering and distinguishing genuine design issues from virtual-platform model limitations.",
 ]:
     bullet(b)
 para("Client and Embedded Validation", bold=True)
 for b in [
-    "Performed system-level validation on embedded and client platform SoCs.",
-    "Developed automation supporting boot verification and platform readiness checks.",
+    "Performed functional validation on client/laptop platform SoCs using Simics Virtual Platform, developing automation (legacy in-house framework) to drive the full flow from system boot through BIOS configuration changes to device/register verification on the system under test.",
     "Collaborated with firmware and software teams to resolve integration issues and improve platform stability.",
 ]:
     bullet(b)
 
 entry_header("IP Verification Engineer", "Intel Microelectronics, Penang, Malaysia", "March 2018 - August 2019")
 for b in [
-    "Verified R-Link Soft IP functionality using SystemVerilog and UVM methodologies.",
-    "Developed constrained-random test scenarios to improve feature coverage and RTL bug detection.",
-    "Performed waveform analysis and root cause investigation using Verdi simulation tools.",
-    "Developed assertions and coverage metrics supporting verification closure objectives.",
-    "Collaborated closely with RTL design teams to resolve protocol and integration issues prior to tape-out.",
+    "Verified a soft IP block's functionality using SystemVerilog/UVM, improving and extending constrained-random test scenarios that uncovered handshake failures and timing-window violations in signal insertion, broadening test coverage to catch them.",
+    "Performed waveform-level root cause analysis using Verdi to debug the protocol and timing issues identified during verification.",
+    "Collaborated with RTL design and architecture teams to resolve protocol and integration issues or limitations ahead of release.",
 ]:
     bullet(b)
 
-entry_header("Test and Product Engineer", "Malaysia Microelectronic Solutions (MMS), Selangor, Malaysia", "August 2017 - March 2018")
+entry_header("Test and Product Engineer", "Malaysia Microelectronic Solutions (MyMS), Selangor, Malaysia", "August 2017 - March 2018")
 for b in [
-    "Developed and debugged production ATE test programs supporting semiconductor high-volume manufacturing.",
-    "Performed yield analysis, electrical characterization and probe-level failure debug.",
-    "Supported manufacturing test optimization and production release readiness.",
-    "Collaborated with external organizations to resolve hardware and probe-related production issues.",
+    "Developed and debugged ATE test programs on Credence Kalos testers for production IC test, including a smart card (payphone card) product for an overseas telecom customer.",
+    "Performed wafer probing on an Electroglas EG4090µ wafer prober loaned from MIMOS, diagnosing probe-related hardware issues including prober die-indexing/mapping mismatches and resolving them in coordination with MIMOS, while supporting yield analysis and electrical characterization for production release readiness.",
 ]:
     bullet(b)
 
 entry_header("Graduate Engineer", "NXP Semiconductors, Selangor, Malaysia", "September 2016 - July 2017")
 for b in [
-    "Developed Teradyne J750 production test solutions.",
-    "Performed device characterization, failure analysis and tester correlation activities.",
-    "Supported production qualification and yield improvement initiatives.",
-    "Maintained automation scripts supporting manufacturing and characterization activities.",
+    "Enhanced Teradyne J750 production test programs for automotive MCU devices as part of the NVM (non-volatile memory) test team.",
+    "Performed device characterization and tester-to-golden-unit correlation to validate test accuracy, supporting failure analysis, yield improvement and production qualification.",
 ]:
     bullet(b)
 
